@@ -1,5 +1,7 @@
 # Tunage
 
+![Tunage](http://github.com/marklogic/tunage/raw/master/Application%20Builder/application/custom/tunage.png)
+
 Tunage is a web application that allows you to search, display, and play tracks from your iTunes library in your browser. It runs on MarkLogic Server and uses Information Studio to load content and Application Builder to generate the basic search application. You can [download a free version of MarkLogic Server on the MarkLogic Developer Community](http://developer.marklogic.com/products).
 
 ## Information Studio
