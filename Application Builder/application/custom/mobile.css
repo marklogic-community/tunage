@@ -1,0 +1,71 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+audio {
+	position: absolute;
+	left: -12000px;
+}
+.canvas, .header {
+	width: auto;
+	position: static;
+	margin: 0;
+	left: 0;
+}
+.header {
+	position: relative;
+	height: auto;
+	width: auto;
+	top: 0;
+	padding: 0.5em;
+}
+.header form {
+	display: inline;
+}
+.header input#q {
+	position: absolute;
+	left: 6em;
+	right: 1em;
+	top: 0.25em;
+	width: auto;
+	height: auto;
+	margin: 0;
+	padding: 0.25em;
+	display: inline;
+}
+.sidebar {
+	float: none;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	
+	display: none;
+}
+.sidebar-shadow {
+	display: none;
+	position: static;
+}
+.content {
+	margin: 0;
+	width: auto;
+}
+.content-background {
+	display: none;
+}
+.home, .user, .footer, iframe, .searchbutton {
+	display: none;
+}
+.result-navigation {
+	background: white;
+}
+
+
+
+
+.result {
+	height: 6.5em;
+}
+.result h3 {
+	font-size: 125%;
+	line-height: 1.25;
+}

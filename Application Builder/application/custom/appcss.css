@@ -1,0 +1,139 @@
+/* 
+	Copyright 2008-2010 Mark Logic Corporation
+	
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	
+	    http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+	
+	@author Justin Makeig <jmakeig@marklogic.com>
+
+*/
+
+.toolbar {
+	position: relative;
+}
+.result h3 {
+	margin: 0;
+	text-indent: -0.5em;
+}
+audio {
+	position: absolute;
+	left: 120px;
+	right: 120px;
+	top: 0;
+	width: 500px;
+	
+	-webkit-transform:scale(.80);
+}
+.result .rating {
+	font-size: 125%;
+	color: #666;
+}
+.result .details {
+	margin-left: 0.5em;
+	font-size: 85%;
+	color: #ccc;
+}
+.result .details.kind {
+	font-size: 55%;
+}
+.result .album {
+	font-style: italic;
+}
+.result.flip, .result.flip a, .result.flip .Rating, .result.flip .details {
+	color: white;
+}
+.trackMeta span {
+	margin-right: 1em;
+}
+
+#sort_menu_element, 
+.yui-skin-sam .yui-ac-content {
+	z-index: 100001 !important; /* This doesn't seem to work and suggestions end up behind the first result. */
+}
+
+
+/*-------------------------------------*/
+.result {
+	position: relative;
+	-webkit-perspective: 0;
+	height: 4.25em;
+}
+.result .front, .result .back {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 1px;
+	bottom: 0;
+	
+	padding: 1em 2em;
+}
+
+/* -- make sure to declare a default for every property that you want animated -- */
+/* -- general styles, including Y axis rotation -- */
+.result .front {
+	z-index: 900;
+	
+	-webkit-transform: rotateY(0deg);
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+
+	/* -- transition is the magic sauce for animation -- */
+	transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	
+	background: white;
+}
+.result.flip .front {
+	z-index: 900;
+	-webkit-transform: rotateY(180deg);
+	
+}
+
+.result .back {
+	background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.38, rgb(42,174,235)),
+    color-stop(0.69, rgb(71,197,255))
+	);
+	z-index: 800;
+	-webkit-transform: rotateY(-180deg);
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+
+	/* -- transition is the magic sauce for animation -- */
+	transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+}
+
+.result.flip .back {
+	z-index: 1000;
+	-webkit-transform: rotateY(0deg);
+}
+
+/* -- X axis rotation for click panel -- */
+.result .front {
+	-webkit-transform: rotateX(0deg);
+}
+.result.flip .front {
+	-webkit-transform: rotateX(180deg);
+}
+.result .back {
+	cursor: pointer;
+	-webkit-transform: rotateX(-180deg);
+}
+.result.flip .back {
+	-webkit-transform: rotateX(0deg);
+}
