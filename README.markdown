@@ -4,7 +4,8 @@ Tunage is a web application that allows you to search, display, and play tracks 
 
 ## Information Studio
 Information Studio is an easy new way to load information into a MarkLogic database. It includes a web-based UI as well as high-level APIs to collect, transform, and load content. Tunage uses a custom collector to pull song metadata directly from iTunes. To install it, copy (or soft link) the `Information Studio/collector-itunes.xqy` file into `$MARKLOGIC_HOME/
-<marklogic-dir>/Assets/plugins/marklogic/appservice`, where `$MARKLOGIC_HOME` is where you installed MarkLogic Server. Restart the Server and you should see the “iTunes Metadata Collector” in your list of collectors in the Information Studio UI.
+<marklogic-dir>/Assets/plugins/marklogic/appservice`, 
+where `$MARKLOGIC_HOME` is where you installed MarkLogic Server. Restart the Server and you should see the “iTunes Metadata Collector” in your list of collectors in the Information Studio UI.
 
 ## Application Builder
 Application Builder allows you to build search applications without having to write any code. It’s great for prototyping new concepts or exploring content. However, it can also be the foundation for a _real_ application, as is the case with Tunage. 
